@@ -2,27 +2,27 @@
 
 A lightweight, composable Swift validation framework for strings and forms. Define rules once and reuse them across your app with clarity and control.
 
-                                                            ## ✨ Features
+## ✨ Features
 
-                                                            - Combine multiple rules using a declarative API
-                                                            - Extensible `Validator` and `Rule` structures
-                                                            - Logical chaining 
-                                                            - Works great with SwiftUI, Combine, or UIKit
+    - Combine multiple rules using a declarative API
+    - Extensible `Validator` and `Rule` structures
+    - Logical chaining 
+    - Works great with SwiftUI, Combine, or UIKit
 
-                                                            ## 📦 Installation
+## 📦 Installation
 
-                                                            You can install **Valid8** using Swift Package Manager. In Xcode:
+    You can install **Valid8** using Swift Package Manager. In Xcode:
 
-                                                                1. Go to **File > Add Packages…**
-                                                            2. Enter the URL:
-                                                                ```
-                                                                https://github.com/emadhegab/Valid8
-                                                            ```
-                                                            3. Select the version and target you'd like to add it to.
+        1. Go to **File > Add Packages…**
+    2. Enter the URL:
+        ```
+        https://github.com/emadhegab/Valid8
+    ```
+    3. Select the version and target you'd like to add it to.
 
-                                                            Or add it to your `Package.swift`:
+    Or add it to your `Package.swift`:
 
-                                                                ```swift
+```swift
     .package(url: "https://github.com/emadhegab/Valid8", from: "1.0.0")
                                                             ```
 
@@ -35,21 +35,22 @@ A lightweight, composable Swift validation framework for strings and forms. Defi
     .rule { !$0.isEmpty }
     .rule { $0.count >= 3 }
 
-validator.check("abc") // true
-validator.check("") // false
-```
+    validator.check("abc") // true
+    validator.check("") // false
+    ```
+
 
 ### Composing Rules
 
 ```swift
-let hasDigit = Valid8().rule { $0.contains { $0.isNumber } }
-let hasUpper = Valid8().rule { $0.range(of: "[A-Z]", options: .regularExpression) != nil }
+    let hasDigit = Valid8().rule { $0.contains { $0.isNumber } }
+    let hasUpper = Valid8().rule { $0.range(of: "[A-Z]", options: .regularExpression) != nil }
 
-let strongValidator = hasDigit && hasUpper
-strongValidator.check("Password123") // true
-```
+    let strongValidator = hasDigit && hasUpper
+    strongValidator.check("Password123") // true
+    ```
 
-### Password Validation
+## Password Validation
 
 Use the built-in `checkPasswordValidity` function:
 
