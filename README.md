@@ -70,15 +70,20 @@ let strength = Valid8().checkPasswordStrength("Aa1@#ValidPass") // Score out of 
 
 Tests are written using Apple’s new [swift-testing](https://github.com/apple/swift-testing) framework.
 
-                                                    Run tests with:
-                                                        ```
-                                                        swift test
-                                                    ```
+Run tests with:
+    ```
+        swift test
+    ```
 
-                                                    ## 📄 License
+## Contribute 
+    * fork
+    * add/fix
+    * PR and spread the love 
+    
+## 📄 License
 
-                                                    MIT License. See [LICENSE](LICENSE) for details.
+MIT License. See [LICENSE](LICENSE) for details.
 
-                                                    ---
+---
 
-                                                    Crafted with ❤️ by Mohamed Hegab
+Crafted with ❤️ by Mohamed Hegab
