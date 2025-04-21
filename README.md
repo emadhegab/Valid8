@@ -17,27 +17,27 @@ A lightweight, composable Swift validation framework for strings and forms. Defi
     2. Enter the URL:
         ```
         https://github.com/emadhegab/Valid8
-    ```
+        ```
     3. Select the version and target you'd like to add it to.
 
     Or add it to your `Package.swift`:
 
-```swift
+    ```swift
     .package(url: "https://github.com/emadhegab/Valid8", from: "1.0.0")
-                                                            ```
-
-                                                            ## 🧪 Usage
-
-                                                            ### Basic Validation
-
-                                                            ```swift
-                                                            let validator = Valid8()
-    .rule { !$0.isEmpty }
-    .rule { $0.count >= 3 }
-
-    validator.check("abc") // true
-    validator.check("") // false
     ```
+
+    ## 🧪 Usage
+
+    ### Basic Validation
+
+```swift
+    let validator = Valid8()
+        .rule { !$0.isEmpty }
+        .rule { $0.count >= 3 }
+
+        validator.check("abc") // true
+        validator.check("") // false
+```
 
 
 ### Composing Rules
@@ -63,16 +63,7 @@ Or compute strength:
 ```swift
 let strength = Valid8().checkPasswordStrength("Aa1@#ValidPass") // Score out of 5
 ```
-
-## ✅ Rule Types (in `Valid8`)
-
-- `checkPasswordCount`
-- `checkLowerCase`
-- `checkUpperCase`
-- `checkNumber`
-- `checkSpecialCharacter`
-- `checkSpace` (disallowed)
-- `canBeEncodedInWindows1252`
+ 
 
 ## 🧪 Testing
 
