@@ -26,9 +26,10 @@ A lightweight, composable Swift validation framework for strings and forms. Defi
     .package(url: "https://github.com/emadhegab/Valid8", from: "1.0.0")
     ```
 
-    ## 🧪 Usage
 
-    ### Basic Validation
+## 🧪 Usage
+
+### Basic Validation
 
 ```swift
     let validator = Valid8()
