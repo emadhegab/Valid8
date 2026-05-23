@@ -1,4 +1,4 @@
-struct Valid8 {
+public struct Valid8 {
 
     var rules = [Rule]()
 
