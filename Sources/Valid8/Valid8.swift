@@ -3,7 +3,8 @@ public struct Valid8 {
     var rules = [Rule]()
 
     public init() {}
-    func check(_ string: String) -> Bool {
+    
+    public func check(_ string: String) -> Bool {
         for rule in rules {
             if !rule.predicate(string) {
                 return false
@@ -20,7 +21,7 @@ public struct Valid8 {
         return combined
     }
 
-    static func && (left: Valid8, right: Valid8) -> Valid8 {
+    public static func && (left: Valid8, right: Valid8) -> Valid8 {
         var combined = Valid8()
         combined.rules = left.rules + right.rules
         return combined
