@@ -1,3 +1,3 @@
-struct Rule {
+public struct Rule {
     let predicate: (String) -> Bool
 }
