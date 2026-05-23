@@ -2,6 +2,7 @@ public struct Valid8 {
 
     var rules = [Rule]()
 
+    public init() {}
     func check(_ string: String) -> Bool {
         for rule in rules {
             if !rule.predicate(string) {
@@ -12,7 +13,7 @@ public struct Valid8 {
         return true
     }
 
-    func rule(predicate: @escaping (String) -> Bool) -> Valid8 {
+    public func rule(predicate: @escaping (String) -> Bool) -> Valid8 {
         var combined = Valid8()
         combined.rules = self.rules
         combined.rules.append(Rule(predicate: predicate))
